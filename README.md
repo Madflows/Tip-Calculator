@@ -7,7 +7,8 @@ Tip Calculator with HTML, CSS and Javascript
 - Mobile First Workflow
 
 
-This site was hosted on [GitHub Pages](https://pages.github.com/).
+You can preview the site on [FlowsTipCalc](flowstipcalc.netlify.app).
 
-## ScreenSHot
+## ScreenShot
 ![ScreenShot 1](https://github.com/Madflows/Tip-Calculator/blob/main/Ti%20Calculator%20Full.png)
+![Screenshot 2](https://github.com/Madflows/Tip-Calculator/blob/main/Tip%20Calculator%20Demo.gif)
