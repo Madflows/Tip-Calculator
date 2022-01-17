@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --light-dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  user-select: none;
+}
+
+/* Defining Root Variables */
+
+body {
+  background: var(--light-grayish-cyan);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app-name{
+    color: var(--very-dark-cyan);
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .5rem;
+}
+
+.card {
+  margin: 5em auto;
+  margin-top: 1.5em;
+  display: flex;
+  background: var(--white);
+  flex-direction: column;
+  border-radius: 1rem;
+  gap: 2rem;
+  width: 100%;
+  max-width: 390px;
+  padding: 1em .5em;
+  columns: 2;
+  box-shadow: 3px 5px 10px hsla(183, 100%, 15%, 0.1);
+}
+
+.input--container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  height: fit-content;
+  padding: .5rem 1rem;
+}
+
+.input-bag{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 100%;
+}
+
+.label{
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--very-dark-cyan);
+}
+
+.input-field{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: hsl(189, 41%, 97%);
+  padding: .3em 1em;
+  border-radius: .3em;
+  border: 2px solid var(--white);
+  transition: 300ms;
+}
+.input-field input{
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: right;
+  height: 2rem;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--very-dark-cyan);
+  background: hsl(189, 41%, 97%);
+  cursor: pointer;
+}
+
+
+
+.input-field:focus-within{
+  border: 2px solid var(--strong-cyan);
+}
+
+/* The Tip Container */
+.tip-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+}
+
+.tip-grid{
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 144px 144px;
+  column-gap: 1em;
+  row-gap: 1em;
+  margin: 0 auto;
+}
+
+.tip-btn{
+  background-color: var(--very-dark-cyan);
+  text-align: center;
+  padding: .5em;
+  border-radius: .2em;
+  color: var(--white);
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid inherit;
+  width: 125px;
+}
+
+.tip-btn:hover{
+  background: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.tip-btn.active{
+  background: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.custom-rate{
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  color: var(--very-dark-cyan);
+  outline: none;
+  text-align: right;
+  border: 2px solid var(--white);
+}
+.custom-rate::placeholder{
+  color: var(--dark-grayish-cyan);
+  text-align: center;
+}
+.custom-rate:focus{
+  border: 2px solid var(--strong-cyan);
+}
+
+.people-label{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.pfield:focus-within{
+  border: 2px solid var(--strong-cyan);
+}
+
+.error{
+  color: red;
+  font-size: smaller;
+  font-weight: 600;
+  display: none;
+}
+
+
+/* Styling the output container */
+.output--container{
+    background: var(--very-dark-cyan);
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    padding: 1.5em;
+    max-width: 340px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.per-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.big-label{
+  color: var(--white);
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.small-label{
+  font-size: .9em;
+  color: var(--light-grayish-cyan);
+  font-weight: 500;
+}
+
+.amount{
+  font-size: 2.5rem;
+  color: var(--strong-cyan);
+  font-weight: 600;
+}
+
+.per-holder{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reset{
+    width: 100%;
+    text-align: center;
+    background: var(--strong-cyan);
+    padding: .6rem 0;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--very-dark-cyan);
+    margin-top: 2em;
+    cursor: pointer;
+}
+
+.reset:hover{
+  background: var(--light-grayish-cyan);
+}
+
+.reset.disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+@media (min-width: 1000px){
+  .app-name{
+    position: absolute;
+    top: 1em;
+  }
+  .card{
+    width: fit-content;
+    max-width: 850px;
+    flex-direction: row;
+    transform: translateY(4em);
+    padding: 1em;
+  }
+
+  .tip-grid{
+    grid-template-columns: 120px 120px 120px;
+  }
+
+  .input--container{
+    width: 400px;
+  }
+  .output--container{
+    width: 400px;
+    padding: 1em;
+    justify-content: space-between;
+  }
+  .reset{
+    margin-top: auto;
+  }
+}

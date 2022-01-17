@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="app-name">SPLI<br />TTER</div>
+
+    <div class="card">
+      <div class="input--container">
+        <div class="bill-container input-bag">
+          <div class="label">Bill</div>
+          <div class="input-field">
+            <img src="./assets/images/icon-dollar.svg" class="field-icon" />
+            <input 
+              type="number" 
+              name="bills" 
+              class="input bills-amount"
+              autocomplete="off"
+              placeholder="0"
+              min="0"
+              autofocus
+               />
+          </div>
+        </div>
+
+        <div class="tip-container">
+          <div class="label">Select Tip %</div>
+          <div class="tip-grid">
+            <div class="tip-btn tips ptip">5%</div>
+            <div class="tip-btn tips ptip">10%</div>
+            <div class="tip-btn tips active ptip">15%</div>
+            <div class="tip-btn tips ptip">25%</div>
+            <div class="tip-btn tips ptip">50%</div>
+            <input
+              type="number"
+              max="90"
+              min="1"
+              autocomplete="off"
+              name="custom"
+              placeholder="CUSTOM"
+              class="custom-rate tip-btn"
+            />
+          </div>
+        </div>
+
+        <div class="number-container input-bag">
+          <div class="label people-label">
+            <p>Number of People</p>
+            <div class="error">Cannot be 0</div>
+          </div>
+          <div class="input-field pfield">
+            <img src="./assets/images/icon-person.svg" class="field-icon" />
+            <input 
+              type="number" 
+              name="amountPeople" 
+              class="input amountPeople"
+              placeholder="0"
+              autocomplete="off"
+              min="0" />
+          </div>
+        </div>
+      </div>
+
+      <div class="output--container">
+        <div class="per-holder">
+          <div class="per-container">
+            <div class="per-label">
+              <div class="big-label">Tip Amount</div>
+              <div class="small-label">/ person</div>
+            </div>
+            <div class="tip-per-person amount">$4.27</div>
+          </div>
+          <div class="per-container">
+            <div class="per-label">
+              <div class="big-label">Total</div>
+              <div class="small-label">/ person</div>
+            </div>
+            <div class="total-per-person amount">$32.79</div>
+          </div>
+        </div>
+
+        <div class="reset disabled">Reset</div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
