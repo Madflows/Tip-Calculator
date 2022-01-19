@@ -75,6 +75,18 @@ body {
   color: var(--very-dark-cyan);
 }
 
+/* Hide Input SPinner */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .input-field{
   display: flex;
   align-items: center;
